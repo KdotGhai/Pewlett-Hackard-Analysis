@@ -12,4 +12,15 @@ In this Module we will be using SQL to extract multiple csv’s, merge data base
 The number of roles that need be filled are 7 with 70,000 plus vacancies:<br />
 ![retirement-titles-count](Resources/retirement_titles_count.png)
 
-<br />If we compare this to the criteria set for # of mentors available,([mentors_count.sql](https://github.com/KdotGhai/Pewlett-Hackard-Analysis/blob/7c1192342fa760b5021b32561b67886607afb922/Queries/mentor_count.sql)):[Mentors_Table](Data/mentor_count.csv)
+<br />If we compare this to the criteria set for # of mentors available,([mentors_count.sql](https://github.com/KdotGhai/Pewlett-Hackard-Analysis/blob/7c1192342fa760b5021b32561b67886607afb922/Queries/mentor_count.sql)):[Mentors_Table](Data/mentor_count.csv)<br />
+
+```sql
+--Do count of mentorship(Compare to count of those retiring)
+SELECT COUNT(me.emp_no),me.title
+INTO mentor_count
+FROM mentorship_eligibilty as me
+GROUP BY me.title
+ORDER BY COUNT DESC;
+-- View Table
+SELECT * FROM mentor_count;
+```
