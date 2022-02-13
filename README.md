@@ -1,1 +1,9 @@
 # Pewlett-Hackard-Analysis
+
+## Overview:
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;In this Module we will be using SQL to extract multiple csv’s, merge data based upon commonalities, then create new data tables with the intent of performing data-analysis. We will be helping Pewlett-Hackard do as such while exporting the data to create tangible and easily digestible data tables to break down their needs. The task is to find consolidate all employees that will be retring soon while excluding those who have already. From there, we will break down the data further by which departments and most-recent title to better grasp which positions are becoming vacant. Lastly, to deal with the vacancy of positions we will compile a list of mentors from the retirees to work in a part-time role.<br />
+
+## Results:
+- The deliverable of unique titles shows us that roughly 70,000 employees will be retiring(excluding those who have retired beforehand). From this list, roughly 41,000 will be eligible for a retirement package based upon the criteria of their birth date and hire date being between (1952 and 1955) and (1985 and 1988) in respective order.
+- The retirement-titles-count table breaks down the employees retiring based upon the employees most recent/highest title position earned.  There’s a transparent display of disparity in titles held by those retiring as only 2 Managers are retiring in comparison to the rest, all of which are quadruple digits and higher in count which is also cause for concern for the company
+- In regard to mentorship program, the notion of “Understaffed” is an understatement to the clear difference in # of mentors compared to vacant positions. When we carry out a count of mentors there’s roughly 1,500 mentors for 70k plus soon-to-be vacant positions of various positions/titles. 
