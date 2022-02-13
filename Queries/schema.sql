@@ -156,13 +156,14 @@ ORDER BY de.dept_no;
 SELECT * FROM salaries
 ORDER BY to_date DESC;
 
--- Sort Salaries and save it
+-- Going to Sort Salaries by filtering dates first in employees
 SELECT emp_no, first_name, last_name, gender
-INTO emp_info
+--INTO emp_info
 FROM employees
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
+--DROP TABLE emp_info;
 
 -- List 1: Employee Information
 -- We're going to do a join of (Salaries & Employees) also (Department Employees & Employees)
@@ -172,7 +173,7 @@ SELECT e.emp_no,
     e.gender,
     s.salary,
     de.to_date
---INTO emp_info
+INTO emp_info
 FROM employees as e
 INNER JOIN salaries as s
 ON (e.emp_no = s.emp_no)
@@ -211,13 +212,13 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
---SKILL DRILL
---Create a query that will return only the information relevant to the Sales team. The requested list includes:
+-- SKILL DRILL
+-- Create a query that will return only the information relevant to the Sales team. The requested list includes:
 	--Employee numbers
 	--Employee first name
 	--Employee last name
 	--Employee department name
-	-- *** For retiring peeps
+	-- *** For retiring peeps(using 'retirement_info' table)
 	
 Select ri.emp_no, ri.first_name, ri.last_name, d.dept_name
 from retirement_info as ri
@@ -227,7 +228,8 @@ INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no)
 Where (d.dept_name = 'Sales');
 
---Skill Drill
+-- Skill Drill: Same as above however, filter for two departments('Sales','Development')
+-- requires to use "in" when filtering in the 'Where' statement as shown below
 Select ri.emp_no, ri.first_name, ri.last_name, d.dept_name
 from retirement_info as ri
 INNER JOIN dept_employees AS de

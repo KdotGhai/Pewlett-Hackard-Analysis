@@ -32,10 +32,16 @@ ORDER BY COUNT DESC;
 	-- create a mentorship-eligibility table that holds the current employees who were born between:
 	-- January 1, 1965 and December 31, 1965.
 
-SELECT DISTINCT ON(e.emp_no) e.emp_no, e.first_name, e.last_name, e.birth_date, t.title
+SELECT DISTINCT ON(e.emp_no) e.emp_no, e.first_name, e.last_name, e.birth_date,de.from_date,de.to_date,t.title
 INTO mentorship_eligibilty
 FROM employees as e
 INNER JOIN titles AS t
 ON (e.emp_no = t.emp_no)
+INNER JOIN dept_employees as de	
+ON (e.emp_no = de.emp_no)
 Where(e.birth_Date BETWEEN '1965-01-01' and '1965-12-31')
-ORDER BY (e.emp_no) DESC;
+ORDER BY (e.emp_no) Asc;
+
+
+-- Drop Table if error/ inaccurate data stored for table
+DROP TABLE mentorship_eligibilty;
