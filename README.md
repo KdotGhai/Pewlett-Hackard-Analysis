@@ -12,7 +12,7 @@ In this Module we will be using SQL to extract multiple csv’s, merge data base
 The number of roles that need be filled are 7 with 70,000 plus vacancies:<br />
 ![retirement-titles-count](Resources/retirement_titles_count.png)
 
-<br />If we compare this to the criteria set for # of mentors available,([mentors_count.sql](https://github.com/KdotGhai/Pewlett-Hackard-Analysis/blob/7c1192342fa760b5021b32561b67886607afb922/Queries/mentor_count.sql)):[Mentors_Table](Data/mentor_count.csv)<br />
+<br />If we compare this to the criteria set for # of mentors available,([mentors_count.sql](https://github.com/KdotGhai/Pewlett-Hackard-Analysis/blob/7c1192342fa760b5021b32561b67886607afb922/Queries/mentor_count.sql)): [Mentors_Table](Data/mentor_count.csv), we notice that there isnt enough manpower to mentor as well as, we have the missing role of "Manager." Pewlett Hackard may need to loosen the constraints of the criteria set before on those eligible to be mentors by taking into consideration of those who already retired <br />
 
 ```sql
 --Do count of mentorship(Compare to count of those retiring)
