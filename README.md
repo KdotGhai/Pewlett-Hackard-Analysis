@@ -9,5 +9,5 @@ In this Module we will be using SQL to extract multiple csv’s, merge data base
 - In regard to mentorship program, the notion of “Understaffed” is an understatement to the clear difference in # of mentors compared to vacant positions. When we carry out a count of mentors there’s roughly 1,500 mentors for 70k plus soon-to-be vacant positions of various titles. 
 
 ## Summary:
-The number of roles that need be filled:<br />
+The number of roles that need be filled are 7 with 70,000 plus vacancies:<br />
 ![retirement-titles-count](Resources/retirement_titles_count.png)
